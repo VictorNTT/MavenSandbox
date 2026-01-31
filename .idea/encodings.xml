@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Common/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Common/src" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lion/src" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lion/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lion/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Sandbox/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Sandbox/src" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Sandbox/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Sandbox/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringbootMVC/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringbootMVC/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tiger/src" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tiger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tiger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

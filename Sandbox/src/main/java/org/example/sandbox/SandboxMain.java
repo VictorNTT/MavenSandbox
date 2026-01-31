@@ -28,5 +28,6 @@ public class SandboxMain {
         LOGGER.debug("Hello SandboxMain debug");
         LOGGER.warn("Hello SandboxMain warn");
         LOGGER.error("Hello SandboxMain error");
+        CommonMain.main(null);
     }
 }
