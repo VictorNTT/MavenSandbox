@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+    <Properties>
+        <Property name="logFileName">c:\temp\MavenSandbox.log</Property>
+    </Properties>
+    <Appenders>
+        <Console name="STDOUT">
+            <PatternLayout>
+                <MarkerPatternSelector defaultPattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} %-5p %c{1} %M [%t]: %m %ex%n">
+                    <PatternMatch key="LOCATION" pattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} %-5p %c{1} %M [%t]: %m %ex%n" />
+                </MarkerPatternSelector>
+            </PatternLayout>
+        </Console>
+        <File name="File" fileName="${logFileName}">
+            <PatternLayout>
+                <MarkerPatternSelector defaultPattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} %-5p %c{1} %M [%t]: %m %ex%n">
+                    <PatternMatch key="LOCATION" pattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} %-5p %c{1} %M [%t]: %m %ex%n" />
+                </MarkerPatternSelector>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="all">
+            <AppenderRef ref="STDOUT" level="trace" />
+            <AppenderRef ref="File" level="all" />
+        </Root>
+    </Loggers>
+</Configuration>
