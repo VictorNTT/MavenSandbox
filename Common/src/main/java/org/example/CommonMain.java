@@ -8,10 +8,14 @@ public class CommonMain {
     public static void main(String[] args) {
         CommonMain m = new CommonMain();
         System.out.println("Hello CommonMain!");
-        System.out.println(m.getClass().getResource("/log4j2-test.xml"));
+        System.out.println("Log4j2 config file loaded? " + (m.getClass().getResource("/log4j2-test.xml") != null));
         LOGGER.debug("CommonMain debug");
         LOGGER.info("CommonMain info");
         LOGGER.warn("CommonMain warn");
         LOGGER.error("CommonMain error");
+    }
+
+    public void foo() {
+        System.out.printf("CommonMain.foo()");
     }
 }
