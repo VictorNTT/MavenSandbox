@@ -2,28 +2,35 @@
 <!-- local run will pick up this file -->
 <Configuration>
     <Properties>
-        <Property name="logFileName">c:\temp\MavenSandbox.log</Property>
+        <Property name="logFileName">c:/temp/MavenSandbox.log</Property>
     </Properties>
     <Appenders>
         <Console name="STDOUT">
             <PatternLayout>
-                <MarkerPatternSelector defaultPattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} %-5p %c{1} %M [%t]: %m %ex%n">
-                    <PatternMatch key="LOCATION" pattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} %-5p %c{1} %M [%t]: %m %ex%n" />
+                <MarkerPatternSelector defaultPattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} [%t] %-5p %c{1}:%L: %m %ex%n">
+                    <PatternMatch key="LOCATION" pattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} [%t] %-5p %c{1}:%L: %m %ex%n" />
                 </MarkerPatternSelector>
             </PatternLayout>
         </Console>
-        <File name="File" fileName="${logFileName}">
+
+        <RollingFile name="RollingFile"
+                     fileName="${logFileName}"
+                     filePattern="${logFileName}.%d{yyyy-MM-dd}.%i">
+
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
             <PatternLayout>
-                <MarkerPatternSelector defaultPattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} %-5p %c{1} %M [%t]: %m %ex%n">
-                    <PatternMatch key="LOCATION" pattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} %-5p %c{1} %M [%t]: %m %ex%n" />
+                <MarkerPatternSelector defaultPattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} [%t] %-5p %c{1}:%L: %m %ex%n">
+                    <PatternMatch key="LOCATION" pattern="%d{yyyyMMdd HH:mm:ss.nnnnnn} [%t] %-5p %c{1}:%L: %m %ex%n" />
                 </MarkerPatternSelector>
             </PatternLayout>
-        </File>
+        </RollingFile>
     </Appenders>
     <Loggers>
         <Root level="all">
             <AppenderRef ref="STDOUT" level="trace" />
-            <AppenderRef ref="File" level="all" />
+            <AppenderRef ref="RollingFile" level="all" />
         </Root>
     </Loggers>
 </Configuration>

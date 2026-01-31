@@ -6,9 +6,17 @@ public class SandboxMain {
     private static final Logger LOGGER = LogManager.getLogger(SandboxMain.class);
 
     public static void main(String[] args) {
-
         System.out.println("Hello SandboxMain!");
         demoLogging();
+        demoRecord();
+    }
+
+    private static void demoRecord() {
+        System.out.println("demo record");
+
+        MQConnection conPro = new MQConnection("127.0.0.1", 1415, "mgr1", "channel1", "userId1");
+        System.out.println(conPro);
+
     }
 
     private static void demoLogging() {
