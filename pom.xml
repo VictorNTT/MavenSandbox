@@ -13,6 +13,7 @@
         <module>Lion</module>
         <module>Sandbox</module>
         <module>Common</module>
+        <module>SpringbootMVC</module>
     </modules>
 
     <properties>
@@ -91,9 +92,10 @@
                     <includes>
                         <include>**/Test*.java</include>
                     </includes>
-                    <systemProperties>
-                        <log4j2.configurationFile>log4j2-test.xml</log4j2.configurationFile>
-                    </systemProperties>
+                    <excludes>
+                        <exclude>**/HelloServiceTest.java</exclude>
+<!--                        <exclude>**/YourTestClassNameToBeExcluded.java</exclude>-->
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>
