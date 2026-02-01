@@ -72,6 +72,11 @@
             <version>2.25.3</version>
         </dependency>
 
+        <dependency>
+            <groupId>net.openhft</groupId>
+            <artifactId>chronicle-queue</artifactId>
+            <version>2026.1</version>
+        </dependency>
     </dependencies>
 
     <build>

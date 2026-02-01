@@ -1,0 +1,17 @@
+Server Design
+
+Server is an app that runs and processes messages real time. Data in and out.
+The following are components:
+
+- ReplayableQueueListener
+    - onMessage(Entity msg,...): triggered when there is a message arrived. Its role is to
+    relay the message on a storage (in memory, in file) for assigned processors to consume
+- Engine : the implementor of ReplayableQueueListener
+- MessagingAdapter: send/receive messages
+- Server -- this is the main() app, entry point
+   - bootstrap all processes: engine, message adaptor, processor, db
+   - initialize configs
+   - start processes
+   - shutdown processes
+
+

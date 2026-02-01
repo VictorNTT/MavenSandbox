@@ -6,10 +6,14 @@ import org.example.CommonMain;
 public class SandboxMain {
     private static final Logger LOGGER = LogManager.getLogger(SandboxMain.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println("Hello SandboxMain!");
-        demoLogging();
-        demoRecord();
+
+
+//        Tested:
+//        demoLogging();
+//        demoRecord();
+
     }
 
     private static void demoRecord() {
