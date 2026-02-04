@@ -14,6 +14,7 @@ import java.util.Arrays;
 // package where this app resign.
 @ComponentScan(basePackages = "org.example.mvc.app.test")
 @ComponentScan(basePackages = "org.example.mvc.controller")
+@ComponentScan(basePackages = "org.example.mvc.app")
 
 @SpringBootApplication
 public class SpringbootApp {
@@ -21,7 +22,7 @@ public class SpringbootApp {
         SpringApplication.run(SpringbootApp.class, args);
     }
 
-    @Bean // run on start up
+    //@Bean // run on start up
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
 
