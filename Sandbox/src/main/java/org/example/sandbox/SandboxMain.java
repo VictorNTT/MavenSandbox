@@ -1,7 +1,7 @@
 package org.example.sandbox;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.CommonMain;
+import org.example.common.util.CommonMain;
 
 public class SandboxMain {
     private static final Logger LOGGER = LogManager.getLogger(SandboxMain.class);
